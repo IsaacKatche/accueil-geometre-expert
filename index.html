@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accueil Géomètre-Expert — Agent vocal IA pour cabinets de géomètres-experts</title>
-<meta name="description" content="Accueil Géomètre-Expert : un agent vocal IA qui répond aux appels que votre cabinet ne peut pas prendre et transmet une fiche qualifiée pour chaque appel.">
+<title>i-accueil | Agent vocal IA pour cabinets de géomètres-experts</title>
+<meta name="description" content="i-accueil, l'agent vocal IA qui répond aux appels de votre cabinet de géomètre-expert 7j/7, 24h/24 et vous transmet une fiche qualifiée après chaque appel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
@@ -135,13 +135,6 @@
     text-transform: uppercase;
     color: var(--amber-400);
     margin-bottom: 22px;
-  }
-
-  .eyebrow::before {
-    content: "";
-    width: 22px;
-    height: 1px;
-    background: var(--amber-400);
   }
 
   .hero h1 {
@@ -282,6 +275,30 @@
     color: var(--navy-600);
   }
 
+  .highlight {
+    margin-top: 28px;
+    padding: 34px 38px;
+    background: var(--amber-100);
+    border: 1px solid rgba(200, 134, 42, 0.45);
+    border-radius: var(--radius);
+  }
+
+  .highlight h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--navy-900);
+    margin: 0 0 12px;
+  }
+
+  .highlight p {
+    margin: 0;
+    max-width: 760px;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
   /* ---------- How it works ---------- */
   .steps {
     counter-reset: step;
@@ -338,8 +355,8 @@
     padding-right: 8px;
   }
 
-  /* ---------- Trial ---------- */
-  .trial {
+  /* ---------- Demo ---------- */
+  .demo {
     background: var(--navy-900);
     color: var(--slate-100);
     border-radius: 20px;
@@ -349,15 +366,15 @@
     overflow: hidden;
   }
 
-  .trial-inner {
+  .demo-inner {
     max-width: 640px;
     position: relative;
     z-index: 1;
   }
 
-  .trial .kicker { color: var(--amber-400); }
+  .demo .kicker { color: var(--amber-400); }
 
-  .trial h2 {
+  .demo h2 {
     font-family: var(--font-display);
     font-weight: 600;
     font-size: clamp(1.6rem, 3vw, 2.1rem);
@@ -365,13 +382,13 @@
     color: #fff;
   }
 
-  .trial p {
+  .demo p {
     color: var(--slate-300);
     font-size: 1.02rem;
     margin: 0 0 30px;
   }
 
-  .trial-points {
+  .demo-points {
     list-style: none;
     padding: 0;
     margin: 0 0 34px;
@@ -380,7 +397,7 @@
     gap: 12px 28px;
   }
 
-  .trial-points li {
+  .demo-points li {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -388,7 +405,7 @@
     color: var(--slate-100);
   }
 
-  .trial-points svg { width: 17px; height: 17px; stroke: var(--amber-400); flex-shrink: 0; }
+  .demo-points svg { width: 17px; height: 17px; stroke: var(--amber-400); flex-shrink: 0; }
 
   /* ---------- Contact ---------- */
   .contact {
@@ -479,7 +496,7 @@
     .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
     .step:nth-child(2)::after { display: none; }
     .contact-grid { grid-template-columns: 1fr; }
-    .trial { padding: 48px 32px; }
+    .demo { padding: 48px 32px; }
   }
 
   @media (max-width: 560px) {
@@ -487,10 +504,10 @@
     section { padding: 60px 0; }
     .steps { grid-template-columns: 1fr; }
     .step::after { display: none !important; }
-    .trial { margin: 0 16px; padding: 40px 24px; border-radius: 16px; }
+    .demo { margin: 0 16px; padding: 40px 24px; border-radius: 16px; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .btn { width: 100%; }
-    .nav-cta span.long { display: none; }
+    .highlight { padding: 26px 22px; }
   }
 </style>
 </head>
@@ -509,9 +526,9 @@
         <line x1="30" y1="20" x2="36" y2="20" stroke="#0f1d2e" stroke-width="1.6"/>
         <circle cx="20" cy="20" r="2.6" fill="#0f1d2e"/>
       </svg>
-      Accueil Géomètre-Expert
+      i-accueil
     </a>
-    <a href="#contact" class="nav-cta"><span class="long">Essai gratuit —</span> Nous contacter</a>
+    <a href="#contact" class="nav-cta">Nous contacter</a>
   </div>
 </header>
 
@@ -528,17 +545,17 @@
       </g>
     </svg>
     <div class="container hero-inner">
-      <span class="eyebrow">Pour cabinets de géomètres-experts</span>
-      <h1>L'agent vocal IA qui répond aux appels que votre cabinet <em>ne peut pas prendre</em></h1>
-      <p class="lead">Ligne occupée, hors horaires, personne au bureau : chaque appel manqué est aujourd'hui un client potentiel perdu. Accueil Géomètre-Expert qualifie la demande et transmet une fiche d'appel exploitable, immédiatement.</p>
+      <span class="eyebrow">Agent vocal IA pour cabinets de géomètres-experts</span>
+      <h1>Votre cabinet répond à <em>chaque appel</em>.</h1>
+      <p class="lead">Ligne occupée, bureau vide, soirée, week-end : i-accueil prend les appels auxquels votre cabinet ne peut pas répondre, qualifie la demande et vous envoie une fiche d'appel exploitable, immédiatement.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Demander l'essai gratuit</a>
+        <a href="tel:+33376220084" class="btn btn-primary">Appeler l'agent de démonstration</a>
         <a href="#comment-ca-marche" class="btn btn-ghost">Voir comment ça marche</a>
       </div>
       <div class="hero-meta">
         <span>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          Disponible en dehors des horaires du cabinet
+          Disponible 7j/7, 24h/24
         </span>
         <span>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/><path d="M9 4v16"/></svg>
@@ -551,26 +568,30 @@
   <section class="problem" id="probleme">
     <div class="container">
       <div class="section-head">
-        <span class="kicker">Le problème</span>
-        <h2>Un cabinet ne peut pas décrocher tous ses appels — et ça coûte des clients</h2>
-        <p>Les géomètres-experts passent une grande partie de leur temps sur le terrain. Pendant ce temps, le téléphone du cabinet continue de sonner.</p>
+        <span class="kicker">Le constat</span>
+        <h2>Un cabinet ne peut pas décrocher tous ses appels, et ça lui coûte des clients.</h2>
+        <p>Géomètre sur le terrain, secrétaire déjà en ligne, personne au bureau, cabinet fermé le soir, le week-end ou pendant les congés… Pendant ce temps, le téléphone du cabinet continue de sonner.</p>
       </div>
       <div class="problem-grid">
         <div class="problem-card">
           <span class="num">01</span>
           <h3>Hors horaires d'ouverture</h3>
-          <p>Un prospect qui appelle le soir ou le week-end tombe sur un répondeur — et souvent, appelle simplement le cabinet suivant.</p>
+          <p>Un futur client qui appelle le soir, le week-end, un jour de fermeture ou pendant les congés tombe sur un répondeur. Souvent, il appelle un concurrent.</p>
         </div>
         <div class="problem-card">
           <span class="num">02</span>
           <h3>Personne au bureau</h3>
-          <p>Géomètres et techniciens sont sur le terrain une grande partie de la journée : la ligne reste sans réponse pendant des heures.</p>
+          <p>Géomètre, technicien ou secrétaire indisponible ou absent : quelques minutes suffisent pour manquer un appel important ou un nouveau client.</p>
         </div>
         <div class="problem-card">
           <span class="num">03</span>
           <h3>Ligne occupée</h3>
           <p>Un seul poste, un seul appel à la fois : pendant qu'un dossier est traité au téléphone, les autres appels n'aboutissent pas.</p>
         </div>
+      </div>
+      <div class="highlight">
+        <h3>Avec i-accueil, votre cabinet devient joignable 7j/7, 24h/24</h3>
+        <p>Chaque appel reçoit une réponse et chaque demande vous arrive qualifiée. Un particulier pris par son travail toute la semaine cherche un géomètre le samedi matin : il est accueilli tout de suite, au lieu d'attendre lundi ou d'appeler ailleurs. Lundi matin, sa demande vous attend déjà.</p>
       </div>
     </div>
   </section>
@@ -607,19 +628,19 @@
     </div>
   </section>
 
-  <section id="essai">
+  <section id="demonstration">
     <div class="container">
-      <div class="trial">
-        <div class="trial-inner">
-          <span class="kicker">Essai gratuit</span>
-          <h2>Deux semaines d'essai, sans engagement</h2>
-          <p>Installez le renvoi d'appel sur votre ligne existante et laissez l'agent traiter les appels manqués pendant deux semaines. Vous jugez sur les fiches reçues, sans aucun engagement de votre part.</p>
-          <ul class="trial-points">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 2 semaines d'essai</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sans engagement</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Ligne du cabinet inchangée</li>
+      <div class="demo">
+        <div class="demo-inner">
+          <span class="kicker">Démonstration</span>
+          <h2>Appelez l'agent et mettez-vous à la place d'un client</h2>
+          <p>Composez le 03 76 22 00 84 et faites une vraie demande : un devis de bornage, une division de parcelle, le suivi d'un dossier. L'agent de démonstration vous répond comme il répondrait à vos clients.</p>
+          <ul class="demo-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Disponible 7j/7, 24h/24</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Deux minutes suffisent</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sans inscription</li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Nous contacter</a>
+          <a href="tel:+33376220084" class="btn btn-primary">Appeler le 03 76 22 00 84</a>
         </div>
       </div>
     </div>
@@ -630,7 +651,7 @@
       <div class="section-head" style="margin-bottom: 0;">
         <span class="kicker">Contact</span>
         <h2>Discutons de votre cabinet</h2>
-        <p>Décrivez-moi votre organisation actuelle et le volume d'appels manqués estimé : je vous propose une mise en place adaptée pour l'essai gratuit de deux semaines.</p>
+        <p>Décrivez-moi votre organisation actuelle et le volume d'appels manqués estimé : je vous propose une mise en place adaptée à votre cabinet.</p>
       </div>
       <div class="contact-card">
         <h3>Isaac Katché</h3>
@@ -642,7 +663,7 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-            <a href="mailto:katcheisaac7@gmail.com">katcheisaac7@gmail.com</a>
+            <a href="mailto:contact@i-accueil.fr">contact@i-accueil.fr</a>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -657,7 +678,7 @@
 
 <footer>
   <div class="container footer-inner">
-    <span>© 2026 Accueil Géomètre-Expert — Isaac Katché, micro-entrepreneur</span>
+    <span>© 2026 i-accueil · Isaac Katché, micro-entrepreneur</span>
     <span>Beauvais, Oise</span>
   </div>
 </footer>
