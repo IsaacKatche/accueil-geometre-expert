@@ -490,6 +490,15 @@
     color: var(--navy-600);
   }
 
+  .footer-inner a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(42, 74, 107, 0.35);
+  }
+  .footer-inner a:hover { color: var(--navy-900); text-decoration-color: currentColor; }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
     .problem-grid { grid-template-columns: 1fr; }
@@ -678,7 +687,7 @@
 
 <footer>
   <div class="container footer-inner">
-    <span>© 2026 i-accueil · Isaac Katché, micro-entrepreneur</span>
+    <span>© 2026 i-accueil · <a href="mentions-legales.html">Mentions légales</a></span>
     <span>Beauvais, Oise</span>
   </div>
 </footer>
